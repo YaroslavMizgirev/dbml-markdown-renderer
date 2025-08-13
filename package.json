@@ -1,0 +1,40 @@
+{
+  "name": "dbml-markdown-renderer",
+  "displayName": "DBML Markdown Renderer",
+  "description": "Renders DBML code blocks in markdown files.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": [
+      {
+        "name": "vscode-dbml-renderer"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo \"TypeScript not used\"",
+    "package": "vsce package",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "MYM",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@dbml/cli": "^3.13.9",
+    "@vscode/vsce": "^3.6.0"
+  },
+  "dependencies": {
+    "vscode-dbml-renderer": "file:dbml-renderer-package"
+  }
+}
