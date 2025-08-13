@@ -16,7 +16,7 @@
   "contributes": {
     "markdown.markdownItPlugins": [
       {
-        "name": "vscode-dbml-renderer"
+        "name": "dbml-markdown-renderer-plugin"
       }
     ]
   },

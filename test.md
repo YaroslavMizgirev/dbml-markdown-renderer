@@ -1,23 +1,22 @@
 # Моя схема базы данных
 
 ```dbml
-Project "Мой Проект" {
+Project "MyProject" {
   database_type: 'PostgreSQL'
-  Note: 'Это демонстрационный проект с поддержкой русского языка'
 }
 
-Table "пользователи" {
+Table "users" { // Используем латинское имя таблицы
   id int [pk, increment]
-  имя varchar
+  name varchar
   email varchar
-  создан_в timestamp
+  created_at timestamp
 }
 
-Table "посты" {
+Table "posts" { // Используем латинское имя таблицы
   id int [pk, increment]
-  заголовок varchar
-  текст text
-  автор_id int [ref: > пользователи.id]
-  создан_в timestamp
+  title varchar
+  text text
+  author_id int [ref: > users.id]
+  created_at timestamp
 }
 ```
