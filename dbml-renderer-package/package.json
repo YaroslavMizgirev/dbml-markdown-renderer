@@ -1,5 +1,8 @@
 {
   "name": "vscode-dbml-renderer",
   "version": "1.0.0",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "@softwaretechnik/dbml-renderer": "^1.0.31"
+  }
 }

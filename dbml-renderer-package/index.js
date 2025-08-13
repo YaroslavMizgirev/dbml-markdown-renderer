@@ -3,7 +3,7 @@ const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-module.exports = function markdownitDbml(md, options) {
+module.exports = function markdownitDbml(md) {
   function renderDbml(code) {
     const tempDir = path.join(__dirname, 'temp');
     if (!fs.existsSync(tempDir)) {
@@ -15,7 +15,7 @@ module.exports = function markdownitDbml(md, options) {
 
     try {
       fs.writeFileSync(inputPath, code, 'utf-8');
-      execSync(`npx --package=@dbml/cli dbml-cli dbml2svg -i "${inputPath}" -o "${outputPath}"`, { encoding: 'utf-8' });
+      execSync(`./node_modules/.bin/dbml-renderer -i "${inputPath}" -o "${outputPath}"`, { encoding: 'utf-8' });
       const svgContent = fs.readFileSync(outputPath, 'utf-8');
       return `<div class="dbml-rendered">${svgContent}</div>`;
     } catch (error) {

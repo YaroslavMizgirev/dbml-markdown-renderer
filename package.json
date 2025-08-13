@@ -28,14 +28,14 @@
   },
   "keywords": [],
   "author": "MYM",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/YaroslavMizgirev/dbml-markdown-renderer.git"
   },
   "devDependencies": {
-    "@dbml/cli": "^3.13.9",
+    "@dbml/core": "^3.13.9",
     "@vscode/vsce": "^3.6.0"
   },
   "files": [

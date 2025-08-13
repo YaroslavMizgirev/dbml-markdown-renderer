@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' https:; script-src 'nonce-random-value';">
+    <title>DBML Preview</title>
+    <style>
+        body {
+            background-color: var(--vscode-editor-background);
+            color: var(--vscode-editor-foreground);
+            padding: 1em;
+        }
+        #diagram-container {
+            border: 1px solid var(--vscode-panel-border);
+            padding: 1em;
+            background-color: var(--vscode-input-background);
+        }
+        .error {
+            color: var(--vscode-errorForeground);
+            font-family: var(--vscode-editor-font-family);
+        }
+    </style>
+</head>
+<body>
+    <div id="diagram-container"></div>
+    <script nonce="random-value" src="render.js"></script>
+</body>
+</html>
