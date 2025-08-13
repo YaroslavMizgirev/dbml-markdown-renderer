@@ -38,7 +38,8 @@
     "@dbml/cli": "^3.13.9",
     "@vscode/vsce": "^3.6.0"
   },
-  "dependencies": {
-    "vscode-dbml-renderer": "file:dbml-renderer-package"
-  }
+  "files": [
+    "extension.js",
+    "dbml-renderer-package"
+  ]
 }
