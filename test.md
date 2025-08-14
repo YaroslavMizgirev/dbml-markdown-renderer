@@ -5,14 +5,14 @@ Project "MyProject" {
   database_type: 'PostgreSQL'
 }
 
-Table "users" { // Используем латинское имя таблицы
+Table "users" {
   id int [pk, increment]
   name varchar
   email varchar
   created_at timestamp
 }
 
-Table "posts" { // Используем латинское имя таблицы
+Table "posts" {
   id int [pk, increment]
   title varchar
   text text

@@ -1,0 +1,50 @@
+{
+  "name": "@softwaretechnik/dbml-renderer",
+  "version": "1.0.31",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softwaretechnik-berlin/dbml-renderer.git"
+  },
+  "main": "./lib/api.js",
+  "types": "./lib/api.d.ts",
+  "bin": {
+    "dbml-renderer": "lib/index.js"
+  },
+  "scripts": {
+    "generate:parser": "peggy src/dbml.pegjs",
+    "format": "npx prettier --write src/ package.json",
+    "format:check": "npx prettier --check src/ package.json",
+    "build": "tsc",
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.19.1",
+    "@types/yargs": "^17.0.33",
+    "ava": "^6.4.0",
+    "peggy": "^4.2.0",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@aduh95/viz.js": "3.4.0",
+    "yargs": "^17.7.2",
+    "zod": "^3.25.67"
+  },
+  "bugs": {
+    "url": "https://github.com/softwaretechnik-berlin/dbml-renderer/issues"
+  },
+  "homepage": "https://github.com/softwaretechnik-berlin/dbml-renderer#readme",
+  "description": "",
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}

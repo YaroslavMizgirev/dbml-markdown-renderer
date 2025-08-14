@@ -1,5 +1,5 @@
 {
-  "name": "@mym/dbml-markdown-renderer",
+  "name": "dbml-markdown-renderer",
   "displayName": "DBML Markdown Renderer",
   "description": "Renders DBML code blocks in markdown files.",
   "version": "0.0.1",
@@ -26,7 +26,8 @@
     "theme": "dark"
   },
   "activationEvents": [
-    "onLanguage:markdown"
+    "onLanguage:markdown",
+    "onCommand:dbml.showPreview"
   ],
   "main": "./extension.js",
   "scripts": {
@@ -52,8 +53,37 @@
     "@softwaretechnik/dbml-renderer": "^1.0.31"
   },
   "devDependencies": {
-    "vscode-test": "^1.6.1",
     "@softwaretechnik/dbml-renderer": "^1.0.31",
-    "@vscode/vsce": "^2.19.0"
+    "@vscode/vsce": "^3.6.0",
+    "vscode-test": "^1.6.1"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "dbml.showPreview",
+        "title": "Show DBML Preview"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "dbmlPreview",
+          "name": "DBML Preview"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "dbml.showPreview",
+          "when": "view == dbmlPreview"
+        }
+      ]
+    }
+  },
+  "capabilities": {
+    "trustedMarkdown": {
+        "enabled": true
+    }
   }
 }

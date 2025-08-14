@@ -1,6 +1,6 @@
 node_modules/*
+.git
+.gitignore
 test.dbml
 test.md
-.gitignore
-
-!node_modules/@softwaretechnik
+*_old*
