@@ -29,7 +29,7 @@
     "onLanguage:markdown",
     "onCommand:dbml.showPreview"
   ],
-  "main": "./extension.js",
+  "main": "./index.js",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "echo \"TypeScript not used\"",
