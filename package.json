@@ -1,45 +1,59 @@
 {
-  "name": "dbml-markdown-renderer",
+  "name": "@mym/dbml-markdown-renderer",
   "displayName": "DBML Markdown Renderer",
   "description": "Renders DBML code blocks in markdown files.",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.80.0"
+  "publisher": "mym",
+  "homepage": "https://github.com/YaroslavMizgirev/dbml-markdown-renderer#readme",
+  "bugs": {
+    "url": "https://github.com/YaroslavMizgirev/dbml-markdown-renderer/issues"
   },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onLanguage:markdown"
-  ],
-  "main": "./extension.js",
-  "contributes": {
-    "markdown.markdownItPlugins": [
-      {
-        "name": "dbml-markdown-renderer-plugin"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "echo \"TypeScript not used\"",
-    "package": "vsce package",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "MYM",
-  "license": "GPL-3.0-or-later",
-  "type": "commonjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/YaroslavMizgirev/dbml-markdown-renderer.git"
   },
-  "devDependencies": {
-    "@dbml/core": "^3.13.9",
-    "@vscode/vsce": "^3.6.0"
+  "engines": {
+    "vscode": "^1.80.0"
   },
-  "files": [
-    "extension.js",
-    "dbml-renderer-package"
-  ]
+  "license": "GPL-3.0-or-later",
+  "pricing": "Free",
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "echo \"TypeScript not used\"",
+    "package": "vsce package",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run pack-dependencies",
+    "pack-dependencies": "cp -r node_modules/@softwaretechnik ./"
+  },
+  "keywords": [
+    "markdown",
+    "md",
+    "dbml",
+    "dbml render"
+  ],
+  "preview": true,
+  "author": {
+    "name": "Yaroslav Mizgirev",
+    "email": "yaroslav@mizgirev.ru"
+  },
+  "dependencies": {
+    "@softwaretechnik/dbml-renderer": "^1.0.31"
+  },
+  "devDependencies": {
+    "vscode-test": "^1.6.1",
+    "@softwaretechnik/dbml-renderer": "^1.0.31",
+    "@vscode/vsce": "^2.19.0"
+  }
 }
